@@ -1,0 +1,17 @@
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: zeldas-dev
+    container_name: links-dev
+    command: deno run --watch --allow-net --allow-read --allow-write --allow-env main.ts
+    environment:
+      PORT: "9000"
+      DENO_ENV: "development"
+    ports:
+      - "9000:9000"
+    volumes:
+      - .:/app
+    user: "0:0"
+    restart: unless-stopped

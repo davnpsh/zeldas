@@ -1,0 +1,7 @@
+FROM denoland/deno:debian-2.9.2
+
+ENV DENO_DIR=/deno_dir
+WORKDIR /app
+EXPOSE 8000
+
+CMD ["deno", "run", "--watch", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "main.ts"]

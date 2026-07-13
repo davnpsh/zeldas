@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read --allow-write --allow-env main.ts --dev",
+    "start": "deno run --allow-net --allow-read --allow-write --allow-env main.ts",
+    "compile": "deno compile --allow-net --allow-read --allow-write --allow-env --output ./zeldas main.ts"
+  }
+}
